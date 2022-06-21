@@ -40,11 +40,11 @@ It contains customers' data according to queries. Data Grid provides `pagination
 
 - Chrome Lighhouse
 
-![image](https://user-images.githubusercontent.com/79497113/171037961-6c5019d6-98e3-475d-bb33-a38ca7a86adc.png)
+![image](https://raw.githubusercontent.com/ankurprasad1/project/main/Lighthouse%20report.png)
 
 - Pingdom
 
-![pingdom](https://user-images.githubusercontent.com/79497113/170854479-8dc6a7bc-9885-4b94-8b2a-2766dac4a740.png)
+![pingdom](https://raw.githubusercontent.com/ankurprasad1/project/main/pingdom.png)
 
 ## Optimisations
 - Redux: As per the official documentation of React Redux, `React Redux in particular is heavily optimized to cut down on unnecessary re-renders.` I tried to management all the query cases of SQL using Redux. It also makes codebase very attractive and improves readability.
@@ -54,6 +54,6 @@ It contains customers' data according to queries. Data Grid provides `pagination
 Deployed using Netlify. Check the link: https://atlan-frontend-assignment-deployment.vercel.app/
 
 ## Screenshots
-![image]()
+![image](https://raw.githubusercontent.com/ankurprasad1/project/main/SQL%20editor.png)
 
-![image](https://user-images.githubusercontent.com/79497113/170876292-6b38059d-f9d5-44c3-82df-816115d569c8.png)
+![image](https://raw.githubusercontent.com/ankurprasad1/project/main/SQL%20query.png)
