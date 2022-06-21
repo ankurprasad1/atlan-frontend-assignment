@@ -1,0 +1,66 @@
+import axios from 'axios';
+
+//@query 
+//SELECT * from customers;
+export const fetchQ1Data = () => async (dispatch) => {
+    try {
+      const { data } = await axios.get('https://raw.githubusercontent.com/ankurprasad1/project/main/json.json');
+      dispatch({ type: 'FETCH_Q1_DATA', payload: data });
+    } catch (error) {
+      console.log(error.message);
+    }
+}
+
+//@query 
+//SELECT * from customers where gender="Male";
+export const fetchQ2Data = () => async(dispatch) => {
+  try {
+    const jsondata = await axios.get('https://raw.githubusercontent.com/ankurprasad1/project/main/json.json')
+    var maleOnlyData = jsondata.data.filter( element => element.gender ==="Male")
+    dispatch({ type: 'FETCH_Q2_DATA', payload: maleOnlyData });
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+//@query 
+//SELECT * from customers where gender="Female";
+export const fetchQ3Data = () => async(dispatch) => {
+  try {
+    const jsondata = await axios.get('https://raw.githubusercontent.com/ankurprasad1/project/main/json.json')
+    var femaleOnlyData = jsondata.data.filter( element => element.gender ==="Female")
+    dispatch({ type: 'FETCH_Q3_DATA', payload: femaleOnlyData });
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+//@query 
+//SELECT * from customers where ip_address="86.228.202.112" OR ip_address="125.47.224.245";
+export const fetchQ4Data = () => async(dispatch) => {
+  try {
+    const jsondata = await axios.get('https://raw.githubusercontent.com/ankurprasad1/project/main/json.json')
+    const ipOnlyData1 = jsondata.data.filter( element => element.ip_address ==="86.228.202.112")
+    const ipOnlyData2 = jsondata.data.filter( element => element.ip_address ==="125.47.224.245")
+    dispatch({ type: 'FETCH_Q4_DATA', payload: ipOnlyData1.concat(ipOnlyData2) });
+
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+//@query 
+//SELECT * from customers where id BETWEEN 401 AND 525;
+export const fetchQ5Data = () => async(dispatch) => {
+  try {
+    const jsondata = await axios.get('https://raw.githubusercontent.com/ankurprasad1/project/main/json.json')
+    let arr =[];
+    for(let i=401; i<=525; i++){
+      let data = jsondata.data.filter( element => element.id ===i)
+      arr = arr.concat(data)
+    }
+    dispatch({ type: 'FETCH_Q5_DATA', payload: arr });
+  } catch (error) {
+    console.log(error.message);
+  }
+}
