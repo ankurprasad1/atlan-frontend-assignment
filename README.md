@@ -57,3 +57,5 @@ Deployed using Netlify. Check the link: https://atlan-frontend-assignment-deploy
 ![image](https://raw.githubusercontent.com/ankurprasad1/project/main/SQL%20editor.png)
 
 ![image](https://raw.githubusercontent.com/ankurprasad1/project/main/SQL%20query.png)
+
+![image](https://raw.githubusercontent.com/ankurprasad1/project/main/SQL%20editor%20query.png)
